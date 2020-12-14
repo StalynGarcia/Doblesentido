@@ -1,0 +1,219 @@
+// Fig. 26.6: Hora.java
+ // Archivo de bean de página que establece textoReloj a la hora en el servidor Web.
+package horaweb;
+
+ import com.sun.rave.web.ui.appbase.AbstractPageBean;
+ import com.sun.rave.web.ui.component.Body;
+ import com.sun.rave.web.ui.component.Form;
+ import com.sun.rave.web.ui.component.Head;
+ import com.sun.rave.web.ui.component.Html;
+ import com.sun.rave.web.ui.component.Link;
+ import com.sun.rave.web.ui.component.Page;
+ import javax.faces.FacesException;
+ import com.sun.rave.web.ui.component.StaticText;
+ import java.text.DateFormat;
+ import java.util.Date;
+import static jdk.nashorn.internal.objects.NativeMath.log;
+
+ public class Hora extends AbstractPageBean
+ {
+ private int __placeholder;
+
+ // método de inicialización de componentes, generado automáticamente.
+private void _init() throws Exception
+ {
+ // cuerpo vacío
+ } // fin del método _init
+
+ private Page page1 = new Page();
+
+ public Page getPage1()
+ {
+ return page1;
+ } // fin del método getPage1
+
+ public void setPage1(Page p)
+ {
+ this.page1 = p;
+ } // fin del método setPage1
+ private Html html1 = new Html();
+
+ public Html getHtml1()
+ {
+ return html1;
+ } // fin del método getHtml1
+ public void setHtml1(Html h)
+ {
+ this.html1 = h;
+ } // fin del método setHtml1
+ private Head head1 = new Head();
+ 
+ public Head getHead1()
+ {
+ return head1;
+ } // fin del método getHead1
+
+ public void setHead1(Head h)
+ {
+ this.head1 = h;
+ } // fin del método setHead1
+
+ private Link link1 = new Link();
+ 
+ public Link getLink1()
+ {
+ return link1;
+ } // fin del método getLink1
+
+ public void setLink1(Link l)
+ {
+ this.link1 = l;
+ } // fin del método setLink1
+
+ private Body body1 = new Body();
+ 
+ public Body getBody1()
+ {
+ return body1;
+ } // fin del método getBody1
+
+ public void setBody1(Body b)
+ {
+ this.body1 = b;
+ } // fin del método setBody1
+
+ private Form form1 = new Form();
+ 
+ public Form getForm1()
+ {
+ return form1;
+ } // fin del método getForm1
+
+ public void setForm1(Form f)
+ {
+ this.form1 = f;
+ } // fin del método setForm1
+
+ private StaticText encabezadoHora = new StaticText();
+ 
+ public StaticText getEncabezadoHora()
+ {
+return encabezadoHora;
+} // fin del método getEncabezadoHora
+
+public void setEncabezadoHora(StaticText st)
+{
+this.encabezadoHora = st;
+} // fin del método setEncabezadoHora
+
+private StaticText textoReloj = new StaticText();
+
+public StaticText getTextoReloj()
+{
+return textoReloj;
+} // fin del método getTextoReloj
+
+public void setTextoReloj(StaticText st)
+{
+this.textoReloj = st;
+} // fin del método setTextoReloj
+
+//Construye una nueva instancia de bean de página
+public Hora()
+{
+// constructor vacío
+} // fin del constructor
+
+// Devuelve una referencia al bean de datos con ámbito
+protected RequestBean1 getRequestBean1(){
+return (RequestBean1)getBean("RequestBean1");
+} // fin del método getRequestBean1
+
+// Devuelve una referencia al bean de datos con ámbito
+protected ApplicationBean1 getApplicationBean1()
+{
+return (ApplicationBean1)getBean("ApplicationBean1");
+} // fin del método getApplicationBean1
+
+// Devuelve una referencia al bean de datos con ámbito
+protected SessionBean1 getSessionBean1()
+{
+return (SessionBean1)getBean("SessionBean1");
+ } // fin del método getSessionBean1
+
+// inicializa el contenido de la página
+public void init()
+ {
+ super.init();
+ try
+ {
+_init();
+} // fin de try
+catch ( Exception e )
+{
+log( "Error al inicializar Hora", e );
+throw e instanceof FacesException ? ( FacesException ) e:
+new FacesException( e );
+} // fin de catch
+} // fin del método init
+
+// método que se llama cuando ocurre una petición de devolución de envío
+public void preprocess()
+{
+// cuerpo vacío
+} // fin del método preprocess
+
+// método al que se llama antes de desplegar la página
+public void prerender()
+{
+textoReloj.setValue( DateFormat.getTimeInstance(
+DateFormat.LONG ).format( new Date() ) );
+} // fin del método prerender
+
+// método al que se llama una vez que se completa el despliegue, si se llamó a init
+public void destroy()
+{
+// cuerpo vacío
+} // fin del método destroy
+ } // fin de la clase Hora
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
+}
