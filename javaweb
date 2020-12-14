@@ -1,6 +1,6 @@
-// Fig. 26.6: Hora.java
+ // Fig. 26.6: Hora.java
  // Archivo de bean de página que establece textoReloj a la hora en el servidor Web.
-package horaweb;
+ package horaweb;
 
  import com.sun.rave.web.ui.appbase.AbstractPageBean;
  import com.sun.rave.web.ui.component.Body;
@@ -13,14 +13,14 @@ package horaweb;
  import com.sun.rave.web.ui.component.StaticText;
  import java.text.DateFormat;
  import java.util.Date;
-import static jdk.nashorn.internal.objects.NativeMath.log;
+ import static jdk.nashorn.internal.objects.NativeMath.log;
 
  public class Hora extends AbstractPageBean
  {
  private int __placeholder;
 
  // método de inicialización de componentes, generado automáticamente.
-private void _init() throws Exception
+ private void _init() throws Exception
  {
  // cuerpo vacío
  } // fin del método _init
@@ -94,9 +94,9 @@ private void _init() throws Exception
  this.form1 = f;
  } // fin del método setForm1
 
- private StaticText encabezadoHora = new StaticText();
+private StaticText encabezadoHora = new StaticText();
  
- public StaticText getEncabezadoHora()
+public StaticText getEncabezadoHora()
  {
 return encabezadoHora;
 } // fin del método getEncabezadoHora
