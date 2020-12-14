@@ -1,0 +1,54 @@
+<%-- 
+    Document   : index
+    Created on : 10/12/2020, 19:28:19
+    Author     : staly
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <?xml version = "1.0" encoding = "UTF-8"?>
+
+    <!-- Fig. 26.4: Hora.jsp -->
+    <!-- Archivo JSP generado por Java Studio Creator 2, que muestra -->
+ <!-- la hora actual en el servidor Web -->
+ <jsp:root version = "1.2"
+ xmlns:f = "http://java.sun.com/jsf/core"
+ xmlns:h = "http://java.sun.com/jsf/html"
+ xmlns:jsp = "http://java.sun.com/JSP/Page"
+ xmlns:ui = "http://www.sun.com/web/ui">
+ <jsp:directive.page contentType = "text/html;charset = UTF-8"
+ pageEncoding = "UTF-8"/>
+ <f:view>
+ <ui:page binding = "#{Hora.page1}" id = "page1">
+ <ui:html binding = "#{Hora.html1}" id = "html1">
+ <ui:head binding = "#{Hora.head1}" id = "head1"
+ title = "Hora Web: un ejemplo simple">
+ <ui:link binding = "#{Hora.link1}" id = "link1"
+ url = "/resources/stylesheet.css"/>
+ </ui:head>
+ <ui:meta content = "60" httpEquiv = "refresh" />
+ <ui:body binding = "#{Hora.body1}" id = "body1"
+ style = "-rave-layout: grid">
+ <ui:form binding = "#{Hora.form1}" id = "form1">
+ <ui:staticText binding = "#{Hora.encabezadoHora}" id =
+ "encabezadoHora" style = "font-size: 18px; left: 24px;
+ top: 24px; position: absolute" text = "Hora actual
+ en el servidor Web : "/>
+ <ui:staticText binding = "#{Hora.textoReloj}" id =
+ "textoReloj" style = "background-color: black;
+ color: yellow; font-size: 18px; left: 24px; top:
+ 48px; position: absolute"/>
+ </ui:form>
+ </ui:body>
+ </ui:html>
+ </ui:page>
+</f:view>
+</jsp:root>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
